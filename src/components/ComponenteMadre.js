@@ -2,14 +2,20 @@ import React from 'react';
 import ComponenteHija from './ComponenteHija';
 import '../stylesheets/ComponenteMadre.scss';
 
-class ComponenteMadre extends React.Component {
-  render() {
+const ComponenteMadre = (props) => {
+  const items = props.pokemons.map((pokemon, index) => {
     return (
-      <div>
-        <ComponenteHija />
-      </div>
+      <li>
+        <ComponenteHija
+          name={pokemon.name}
+          url={pokemon.url}
+          types={pokemon.types}
+          evolution={pokemon.evolution}
+        />
+      </li>
     );
-  }
-}
+  });
+  return <ul>{items}</ul>;
+};
 
 export default ComponenteMadre;
