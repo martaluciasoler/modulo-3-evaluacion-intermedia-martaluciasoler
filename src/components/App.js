@@ -6,8 +6,11 @@ import '../stylesheets/App.scss';
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <div className="App">
+        <h1 className="tittle">POKÉMONS</h1>
+        <h2>ポケットモンスター</h2>
         <PokemonList Pokemons={Pokemons} />
+        <span className="span">¡Hazte con todos!</span>
       </div>
     );
   }
