@@ -1,20 +1,13 @@
 import React from 'react';
-import ComponenteMadre from './ComponenteMadre';
+import Pokemons from '../data/pokemons.json';
+import PokemonList from './PokemonList';
 import '../stylesheets/App.scss';
-import PokemonsFromApi from '../data/pokemons.json';
-console.log(PokemonsFromApi);
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      pokemons: PokemonsFromApi,
-    };
-  }
   render() {
     return (
       <div>
-        <ComponenteMadre pokemons={this.state.pokemons} />
+        <PokemonList Pokemons={Pokemons} />
       </div>
     );
   }
