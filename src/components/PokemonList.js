@@ -4,9 +4,9 @@ import '../stylesheets/PokemonList.scss';
 
 class PokemonList extends React.Component {
   render() {
-    const result = this.props.Pokemons.map((pokemon, index) => {
+    const result = this.props.Pokemons.map((pokemon) => {
       return (
-        <li className="poke" key={pokemon.id}>
+        <div className="poke" key={pokemon.id}>
           <PokemonItem
             key={pokemon.id}
             id={pokemon.id}
@@ -14,7 +14,7 @@ class PokemonList extends React.Component {
             types={pokemon.types}
             url={pokemon.url}
           />
-        </li>
+        </div>
       );
     });
     return (
