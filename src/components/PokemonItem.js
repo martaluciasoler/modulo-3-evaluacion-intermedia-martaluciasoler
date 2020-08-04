@@ -10,7 +10,7 @@ class PokemonItem extends React.Component {
     return (
       <div className="poke-item">
         <h2 className="pokemon__title">{this.props.name}</h2>
-        <img alt={this.props.name} src={this.props.url} />
+        <img className="image" alt={this.props.name} src={this.props.url} />
         <div className="types">{eachType}</div>
       </div>
     );
